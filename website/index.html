@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback API</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <h1>Feedback API</h1>
+
+        <div class="auth-section">
+
+            <button
+                type="button"
+                onclick="login()">
+                Login
+            </button>
+
+            <button
+                type="button"
+                onclick="signup()">
+                Sign Up
+            </button>
+
+            <button
+                type="button"
+                onclick="logout()">
+                Log Out
+            </button>
+
+        </div>
+
+        <div id="user-status" class="status-box">
+            Browsing as Guest
+        </div>
+
+        <form>
+
+            <label for="feedback">Enter your feedback:</label><br>
+
+            <textarea
+                id="feedback"
+                name="feedback"
+                rows="4"
+                cols="50"
+                placeholder="Enter your feedback"></textarea>
+
+            <br>
+
+            <label class="checkbox-label">
+                <input
+                    type="checkbox"
+                    id="anonymous"
+                    checked>
+                Submit anonymously
+            </label>
+
+            <br><br>
+
+            <button
+                type="button"
+                onclick="submitFeedback()">
+                Submit Feedback
+            </button>
+            
+            <button
+                type="button"
+                onclick="fetchFeedback()">
+                Download Feedback
+            </button>
+
+        </form>
+
+        <div id="message"></div>
+
+        <hr>
+
+        <h2>Feedback Preview</h2>
+
+        <div id="feedback-preview">
+            No feedback loaded.
+        </div>
+
+        <script src="scripts.js"></script>
+
+    </body>
+</html>
